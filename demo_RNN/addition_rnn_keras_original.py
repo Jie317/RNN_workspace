@@ -89,8 +89,9 @@ expected = []
 seen = set()
 print('Generating data...')
 while len(questions) < TRAINING_SIZE:
-    f = lambda: int(''.join(np.random.choice(list('0123456789'))
-                    for i in range(np.random.randint(1, DIGITS + 1))))
+    # f = lambda: int(''.join(np.random.choice(list('0123456789'))
+    #                 for i in range(np.random.randint(1, DIGITS + 1))))
+    f = lambda: np.random.randint(10**DIGITS)
     a, b = f(), f()
     # Skip any addition questions we've already seen
     # Also skip any such that x+Y == Y+x (hence the sorting).
