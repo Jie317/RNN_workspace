@@ -1,6 +1,6 @@
-import tflearn
 import numpy as np
-from tflearn.data_utils import to_categorical, pad_sequences
+import keras as K
+from keras import Dense, 
 
 # Data preparation
 int2binary = {}
@@ -35,7 +35,10 @@ trainY = np.array([c_s]).T
 trainY = to_categorical(trainY, nb_classes=2)
 print(trainX,trainY, ...)
 
+
+
 # Network building
+
 net = tflearn.input_data([None, 2])
 net = tflearn.embedding(net,input_dim=10000, output_dim=128)
 net = tflearn.simple_rnn(net, 16)
