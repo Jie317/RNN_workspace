@@ -25,7 +25,7 @@ for i in range(20000):
 	a_s += list(a)
 	b_s += list(b)
 	c_s += list(c)
-
+ 
 trainX = np.array([a_s, b_s]).T
 trainY = np.array([c_s]).T
 
